@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  # Servicio del Sistema de Trámite Online (Legacy)
+  tramite-legacy:
+    build: .                  # Le dice a Compose: "Busca el Dockerfile en esta misma carpeta"
+    container_name: tramite_poc
+    ports:
+      - "8080:80"             # Mapea el puerto 80 del contenedor al 8080 de tu máquina física
+    restart: unless-stopped
