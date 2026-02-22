@@ -6,6 +6,7 @@ RUN a2enmod rewrite
 
 # Copiamos nuestra aplicación (la carpeta public-html) a la ruta pública de Apache
 COPY public-html/ /var/www/html/
+COPY backups.conf /etc/apache2/conf-enabled/backups.conf
 
 # [VULNERABILIDAD SIMULADA] 
 # Creamos la carpeta uploads y le damos permisos 777 (lectura, escritura y ejecución para todos).
